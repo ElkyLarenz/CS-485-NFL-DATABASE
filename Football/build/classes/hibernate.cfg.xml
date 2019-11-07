@@ -22,6 +22,8 @@
 	<mapping resource = "team.hbm.xml"/>
 	<mapping resource = "qb.hbm.xml"/>
 	<mapping resource = "runningBack.hbm.xml"/>
+	<mapping resource = "wideReceiver.hbm.xml"/>
+	<mapping resource = "tightEnd.hbm.xml"/>
 
 </session-factory>
 </hibernate-configuration>
