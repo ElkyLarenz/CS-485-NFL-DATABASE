@@ -9,7 +9,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 public class wideReceiverScrape {
-	public static void main(String[] args)
+	public wideReceiverScrape()
 	{
 	final String url = "http://www.nfl.com/stats/categorystats?archive=false&conference=null&statisticPositionCategory=WIDE_RECEIVER&season=2019&seasonType=REG&experience=&tabSeq=1&qualified=true&Submit=Go";
 
@@ -39,7 +39,7 @@ public class wideReceiverScrape {
 						playerTd,player20Plus, player40Plus,  player1st, player1stPerc,    playerFum);
 				
 				System.out.println(
-						playerRank + " " + playerName + " " + playerTeam + " " + playerPos + " " + playerRec);
+						playerRank + "\t" + playerName + "\t \t" + playerTeam + "\t" + playerPos + "\t" + playerRec);
 			}
 		}
 	} catch (Exception ex) {
@@ -58,7 +58,7 @@ public class wideReceiverScrape {
 		Transaction tx=null;
 		try {
 			tx = session.beginTransaction();
-			System.out.print("hi");
+		
 			//Update Sport java object
 			
 			//Save java object Sport to database
@@ -70,5 +70,6 @@ public class wideReceiverScrape {
 		}finally {
 			if(session.isOpen()) session.close();
 		}
+		sessionFactory.close();
 	}
 }

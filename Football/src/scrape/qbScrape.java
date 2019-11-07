@@ -9,8 +9,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 public class qbScrape {
-	public static void main(String[] args)
-	{
+	public qbScrape() {
 		final String url = "http://www.nfl.com/stats/categorystats?tabSeq=1&statisticPositionCategory=QUARTERBACK&qualified=true&season=2019&seasonType=REG";
 		
 		try
@@ -46,7 +45,7 @@ public class qbScrape {
 					final String playerRate = row.select("td:nth-of-type(20)").text();
 					send(playerRank, playerName, playerTeam, playerPos, playerCom, playerAtt, playerPct, playerAttG, playerYds, playerAvg, playerYdsG,
 							playerTd, playerInt, player1st, player1stPerc, playerLng, player20Plus, player40Plus, playerSck, playerRate);
-					System.out.println(playerRank + " " + playerName + " " + playerTeam + " " + playerPos + " " + playerCom);
+					System.out.println(playerRank + "\t" + playerName + "\t \t" + playerTeam + "\t" + playerPos + "\t" + playerCom);
 				}
 			}
 		}
@@ -54,8 +53,8 @@ public class qbScrape {
 		{
 			ex.printStackTrace();
 		}
+		
 	}
-	
 	public static void send(String ra, String na, String te, String pos, String com, String att, String pct, String attG, String yds, String avg,
 			String ydsG, String td, String inter, String first, String firstPer, String lng, String twen, String forty, String sck, String rate)
 	{
@@ -67,7 +66,7 @@ public class qbScrape {
 		Transaction tx=null;
 		try {
 			tx = session.beginTransaction();
-			System.out.print("hi");
+			
 			//Update Sport java object
 			
 			//Save java object Sport to database
@@ -77,8 +76,10 @@ public class qbScrape {
 		}catch(Exception se) {
 			tx.rollback();
 		}finally {
+			
 			if(session.isOpen()) session.close();
 		}
+		sessionFactory.close();
 	}
 
 }

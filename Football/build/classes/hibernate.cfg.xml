@@ -24,6 +24,9 @@
 	<mapping resource = "runningBack.hbm.xml"/>
 	<mapping resource = "wideReceiver.hbm.xml"/>
 	<mapping resource = "tightEnd.hbm.xml"/>
+	<mapping resource = "defensiveLineman.hbm.xml"/>
+	<mapping resource = "linebacker.hbm.xml"/>
+	<mapping resource = "defensiveBack.hbm.xml"/>
 
 </session-factory>
 </hibernate-configuration>

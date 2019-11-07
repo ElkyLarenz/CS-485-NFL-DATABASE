@@ -9,7 +9,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 public class tightEndScrape {
-	public static void main(String[] args)
+	public tightEndScrape()
 	{
 	final String url = "http://www.nfl.com/stats/categorystats?archive=false&conference=null&statisticPositionCategory=TIGHT_END&season=2019&seasonType=REG&experience=&tabSeq=1&qualified=true&Submit=Go";
 
@@ -70,5 +70,6 @@ public class tightEndScrape {
 		}finally {
 			if(session.isOpen()) session.close();
 		}
+		sessionFactory.close();
 	}
 }

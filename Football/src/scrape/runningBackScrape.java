@@ -9,7 +9,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 public class runningBackScrape {
-	public static void main(String[] args) {
+	public runningBackScrape(){
 		final String url = "http://www.nfl.com/stats/categorystats?archive=false&conference=null&statisticPositionCategory=RUNNING_BACK&season=2019&seasonType=REG&experience=&tabSeq=1&qualified=true&Submit=Go";
 
 		try {
@@ -39,7 +39,7 @@ public class runningBackScrape {
 							playerTd,  player1st, player1stPerc,  player20Plus, player40Plus,  playerFum);
 					
 					System.out.println(
-							playerRank + " " + playerName + " " + playerTeam + " " + playerPos + " " + playerAtt);
+							playerRank + "\t" + playerName + "\t \t" + playerTeam + "\t" + playerPos + "\t" + playerAtt);
 				}
 			}
 		} catch (Exception ex) {
@@ -53,22 +53,24 @@ public class runningBackScrape {
 		runningBack run1 = new runningBack(ra, na, te, pos, att, attG, yds, avg, ydsG, td, lng, first, firstPer, twen, forty, fum);
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.getCurrentSession();
-		
+		System.out.println("In the send");
 		
 		Transaction tx=null;
 		try {
+			
 			tx = session.beginTransaction();
-			System.out.print("hi");
 			//Update Sport java object
 			
 			//Save java object Sport to database
 			session.save(run1);
 			session.flush();
 			tx.commit();
+			
 		}catch(Exception se) {
 			tx.rollback();
 		}finally {
 			if(session.isOpen()) session.close();
 		}
+		sessionFactory.close();
 	}
 }

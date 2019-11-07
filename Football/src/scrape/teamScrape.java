@@ -10,7 +10,7 @@ import org.jsoup.nodes.Element;
 
 
 public class teamScrape {
-	public static void main(String[] args) {
+	public teamScrape() {
 		final String url = "https://www.foxsports.com/nfl/standings?season=2019&seasonType=1&grouping=3";
 
 		try {
@@ -55,7 +55,7 @@ public class teamScrape {
 		Transaction tx=null;
 		try {
 			tx = session.beginTransaction();
-			System.out.print("hi");
+		
 			//Update Sport java object
 			
 			//Save java object Sport to database
@@ -67,5 +67,6 @@ public class teamScrape {
 		}finally {
 			if(session.isOpen()) session.close();
 		}
+		sessionFactory.close();
 	}
 }
