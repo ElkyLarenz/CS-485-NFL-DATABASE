@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mpping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- Hibernate mapping file, it maps a Java class Sport(ID,Sport) to database table sports(id,sports) -->
+
+<hibernate-mapping>
+	<class name="scrape.fieldGoalKicker" table="fieldGoalKicker">  <!-- Java class Sport to table sport --> 
+		<id name="id" type="int">
+			<generator class="increment" /> <!-- ID is automatically generated -->
+		</id>
+		<property name="Rank" column="ranked" type="string" />
+		<property name="Name" column="name" type="string" />
+		<property name="Team" column="team" type="string" />
+		<property name="Position" column="pos" type="string" />
+		<property name="Fgm" column="fgm" type="string" />		
+		<property name="Fgatt" column="fg_att" type="string" />
+		<property name="Pct19" column="pct19" type="string" />
+		<property name="Blk19" column="blk19" type="string" />
+		<property name="Lng19" column="lng19" type="string" />
+		<property name="Am29" column="am29" type="string" />	
+		<property name="Pct29" column="pct29" type="string" />
+		<property name="Am39" column="am39" type="string" />	
+		<property name="Pct39" column="pct39" type="string" />
+		<property name="Am49" column="am49" type="string" />
+		<property name="Pct49" column="pct49" type="string" />
+		<property name="Am50plus" column="am_fifty_plus" type="string" />
+		<property name="Pct50plus" column="pct_fifty_plus" type="string" />
+		<property name="Xpm" column="xpm" type="string" />
+		<property name="XPatt" column="xpatt" type="string" />
+		<property name="Pctpat" column="pctpat" type="string" />
+		<property name="Blkpat" column="blkpat" type="string" />
+		
+	</class>
+
+	<class name="scrape.kickoffKicker" table="kickoffKicker">  <!-- Java class Sport to table sport --> 
+		<id name="id" type="int">
+			<generator class="increment" /> <!-- ID is automatically generated -->
+		</id>
+		<property name="Ranked" column="ranked" type="string" />
+		<property name="Name" column="name" type="string" />
+		<property name="Team" column="team" type="string" />
+		<property name="Position" column="pos" type="string" />
+		<property name="Ko" column="ko" type="string" />		
+		<property name="Yards" column="yards" type="string" />
+		<property name="Oob" column="oob" type="string" />
+		<property name="Average" column="average" type="string" />
+		<property name="Tb" column="tb" type="string" />
+		<property name="Pct" column="pct" type="string" />	
+		<property name="Ret" column="ret" type="string" />
+		<property name="Avg2" column="avg2" type="string" />	
+		<property name="Td" column="td" type="string" />
+		<property name="Osk" column="osk" type="string" />
+		<property name="Oskr" column="oskr" type="string" />
+	
+	</class>
+	
+	
+	<class name="scrape.kickReturner" table="kickReturner">  <!-- Java class Sport to table sport --> 
+		<id name="id" type="int">
+			<generator class="increment" /> <!-- ID is automatically generated -->
+		</id>
+		<property name="Rank" column="ranked" type="string" />
+		<property name="Name" column="name" type="string" />
+		<property name="Team" column="team" type="string" />
+		<property name="Pos" column="pos" type="string" />
+		<property name="Ret" column="ret" type="string" />		
+		<property name="Yards" column="yards" type="string" />
+		<property name="Average" column="average" type="string" />
+		<property name="Lng" column="lng" type="string" />
+		<property name="Td" column="td" type="string" />
+		<property name="Twenty" column="twenty" type="string" />	
+		<property name="Forty" column="forty" type="string" />
+		<property name="Fc" column="fc" type="string" />	
+		<property name="Fum" column="fum" type="string" />
+		<property name="PuntRet" column="punt_ret" type="string" />
+		<property name="PuntRety" column="punt_rety" type="string" />
+		<property name="PuntAvg" column="punt_average" type="string" />
+		<property name="PuntLng" column="punt_lng" type="string" />
+		<property name="PuntTd" column="punt_td" type="string" />
+		<property name="PuntTwenty" column="punt_twenty" type="string" />
+		<property name="PuntForty" column="punt_forty" type="string" />
+		<property name="PuntFc" column="punt_fc" type="string" />
+		<property name="PuntFum" column="punt_fum" type="string" />
+	
+	</class>
+</hibernate-mapping>

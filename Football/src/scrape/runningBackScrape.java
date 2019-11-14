@@ -53,7 +53,7 @@ public class runningBackScrape {
 		runningBack run1 = new runningBack(ra, na, te, pos, att, attG, yds, avg, ydsG, td, lng, first, firstPer, twen, forty, fum);
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.getCurrentSession();
-		System.out.println("In the send");
+		
 		
 		Transaction tx=null;
 		try {

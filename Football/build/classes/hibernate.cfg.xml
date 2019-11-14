@@ -27,6 +27,7 @@
 	<mapping resource = "defensiveLineman.hbm.xml"/>
 	<mapping resource = "linebacker.hbm.xml"/>
 	<mapping resource = "defensiveBack.hbm.xml"/>
+	<mapping resource = "fieldGoalKicker.hbm.xml"/>
 
 </session-factory>
 </hibernate-configuration>

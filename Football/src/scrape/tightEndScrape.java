@@ -58,7 +58,7 @@ public class tightEndScrape {
 		Transaction tx=null;
 		try {
 			tx = session.beginTransaction();
-			System.out.print("hi");
+			
 			//Update Sport java object
 			
 			//Save java object Sport to database

@@ -29,6 +29,9 @@ public class refresh {
 			session.createSQLQuery("TRUNCATE TABLE  teams").executeUpdate();
 			session.createSQLQuery("TRUNCATE TABLE  tightend").executeUpdate();
 			session.createSQLQuery("TRUNCATE TABLE  widereceiver").executeUpdate();
+			session.createSQLQuery("TRUNCATE TABLE  fieldgoalkicker").executeUpdate();
+			session.createSQLQuery("TRUNCATE TABLE  kickoffkicker").executeUpdate();
+			session.createSQLQuery("TRUNCATE TABLE  kickreturner").executeUpdate();
 			tx.commit();
 		}catch(Exception se) {
 			tx.rollback();
@@ -67,6 +70,12 @@ public class refresh {
 		linebackerScrape line2 = new linebackerScrape();
 		System.out.println("\nDefensive Back");
 		defensiveBackScrape def = new defensiveBackScrape();
+		System.out.println("\nField Goal Kicker");
+		fieldGoalKickerScrape kick = new fieldGoalKickerScrape();
+		System.out.println("\nKickoff Kicker");
+		kickoffKickerScrape kickoff = new kickoffKickerScrape();
+		System.out.println("\nKick Returner");
+		kickReturnerScrape kickreturner = new kickReturnerScrape();
 		
 	}
 	
