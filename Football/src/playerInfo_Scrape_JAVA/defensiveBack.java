@@ -1,4 +1,4 @@
-package scrape;
+package playerInfo_Scrape_JAVA;
 
 public class defensiveBack {
 

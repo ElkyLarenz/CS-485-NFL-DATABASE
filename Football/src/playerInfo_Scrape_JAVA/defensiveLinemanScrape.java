@@ -1,4 +1,4 @@
-package scrape;
+package playerInfo_Scrape_JAVA;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -8,10 +8,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-public class linebackerScrape {
-	public linebackerScrape()
+public class defensiveLinemanScrape {
+	public defensiveLinemanScrape()
 	{
-	final String url = "http://www.nfl.com/stats/categorystats?archive=false&conference=null&statisticPositionCategory=LINEBACKER&season=2019&seasonType=REG&experience=&tabSeq=1&qualified=true&Submit=Go";
+	final String url = "http://www.nfl.com/stats/categorystats?archive=false&conference=null&statisticPositionCategory=DEFENSIVE_LINEMAN&season=2019&seasonType=REG&experience=&tabSeq=1&qualified=true&Submit=Go";
 
 	try {
 		final Document doc = Jsoup.connect(url).get();
@@ -53,7 +53,7 @@ public class linebackerScrape {
 			String pdef, String inter, String tds, String yds, String lng, String ff, String rec, String td)
 	{
 
-		linebacker line1 = new linebacker(ra, na, te, pos1, comb1, tot, ast, sck, sfty, pdef, inter, tds, yds, lng, ff, rec, td);
+		defensiveLineman def1 = new defensiveLineman(ra, na, te, pos1, comb1, tot, ast, sck, sfty, pdef, inter, tds, yds, lng, ff, rec, td);
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.getCurrentSession();
 		
@@ -61,10 +61,11 @@ public class linebackerScrape {
 		Transaction tx=null;
 		try {
 			tx = session.beginTransaction();
+			
 			//Update Sport java object
 			
 			//Save java object Sport to database
-			session.save(line1);
+			session.save(def1);
 			session.flush();
 			tx.commit();
 		}catch(Exception se) {
@@ -72,10 +73,8 @@ public class linebackerScrape {
 		}finally {
 			if(session.isOpen()) session.close();
 		}
+	
 		sessionFactory.close();
-		
 	}
-
-
 
 }

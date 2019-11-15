@@ -11,7 +11,7 @@
 	<property name="connection.url"> jdbc:mysql://localhost:3306/nfl</property>
 	<!-- should be the username and password to MySQL server -->
 	<property name="connection.username">root</property>
-	<property name="connection.password">Jonsnow18</property>
+	<property name="connection.password">Class410</property>
 
 	<!-- Using JDBS to connect to MySQL, JDBC driver needs to to included in the build path of eclipse -->
 	<property name="connection.driver_class"> com.mysql.jdbc.Driver</property>
@@ -19,15 +19,15 @@
 	<property name="current_session_context_class">thread</property>
 
     
-	<mapping resource = "team.hbm.xml"/>
-	<mapping resource = "qb.hbm.xml"/>
-	<mapping resource = "runningBack.hbm.xml"/>
-	<mapping resource = "wideReceiver.hbm.xml"/>
-	<mapping resource = "tightEnd.hbm.xml"/>
-	<mapping resource = "defensiveLineman.hbm.xml"/>
-	<mapping resource = "linebacker.hbm.xml"/>
-	<mapping resource = "defensiveBack.hbm.xml"/>
-	<mapping resource = "fieldGoalKicker.hbm.xml"/>
+	<mapping resource = "playerInfo_Scrape_XML/team.hbm.xml"/>
+	<mapping resource = "playerInfo_Scrape_XML/qb.hbm.xml"/>
+	<mapping resource = "playerInfo_Scrape_XML/runningBack.hbm.xml"/>
+	<mapping resource = "playerInfo_Scrape_XML/wideReceiver.hbm.xml"/>
+	<mapping resource = "playerInfo_Scrape_XML/tightEnd.hbm.xml"/>
+	<mapping resource = "playerInfo_Scrape_XML/defensiveLineman.hbm.xml"/>
+	<mapping resource = "playerInfo_Scrape_XML/linebacker.hbm.xml"/>
+	<mapping resource = "playerInfo_Scrape_XML/defensiveBack.hbm.xml"/>
+	<mapping resource = "playerInfo_Scrape_XML/fieldGoalKicker.hbm.xml"/>
 
 </session-factory>
 </hibernate-configuration>

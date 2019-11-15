@@ -1,4 +1,4 @@
-package scrape;
+package playerInfo_Scrape_JAVA;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -8,10 +8,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-public class defensiveLinemanScrape {
-	public defensiveLinemanScrape()
+public class defensiveBackScrape {
+
+	public defensiveBackScrape()
 	{
-	final String url = "http://www.nfl.com/stats/categorystats?archive=false&conference=null&statisticPositionCategory=DEFENSIVE_LINEMAN&season=2019&seasonType=REG&experience=&tabSeq=1&qualified=true&Submit=Go";
+	final String url = "http://www.nfl.com/stats/categorystats?archive=false&conference=null&statisticPositionCategory=DEFENSIVE_BACK&season=2019&seasonType=REG&experience=&tabSeq=1&qualified=true&Submit=Go";
 
 	try {
 		final Document doc = Jsoup.connect(url).get();
@@ -37,11 +38,12 @@ public class defensiveLinemanScrape {
 				final String playerFf = row.select("td:nth-of-type(15)").text();
 				final String playerRec = row.select("td:nth-of-type(16)").text();
 				final String playerTd = row.select("td:nth-of-type(17)").text();
+				System.out.println(
+						playerRank + " " + playerName + " " + playerTeam + " " + playerPos + " " + playerRec);
 				send(playerRank, playerName, playerTeam, playerPos, playerComb, playerTotal, playerAst, playerSck,  playerSfty, 
 						playerPdef,playerInt, playerTds,  playerYds, playerLng, playerFf, playerRec, playerTd);
 				
-				System.out.println(
-						playerRank + " " + playerName + " " + playerTeam + " " + playerPos + " " + playerRec);
+				
 			}
 		}
 	} catch (Exception ex) {
@@ -52,8 +54,8 @@ public class defensiveLinemanScrape {
 	public static void send(String ra, String na, String te, String pos1, String comb1, String tot, String ast, String sck, String sfty,
 			String pdef, String inter, String tds, String yds, String lng, String ff, String rec, String td)
 	{
-
-		defensiveLineman def1 = new defensiveLineman(ra, na, te, pos1, comb1, tot, ast, sck, sfty, pdef, inter, tds, yds, lng, ff, rec, td);
+		
+		defensiveBack back1 = new defensiveBack(ra, na, te, pos1, comb1, tot, ast, sck, sfty, pdef, inter, tds, yds, lng, ff, rec, td);
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.getCurrentSession();
 		
@@ -65,16 +67,22 @@ public class defensiveLinemanScrape {
 			//Update Sport java object
 			
 			//Save java object Sport to database
-			session.save(def1);
+			session.save(back1);
+			
 			session.flush();
+			
 			tx.commit();
 		}catch(Exception se) {
 			tx.rollback();
 		}finally {
 			if(session.isOpen()) session.close();
 		}
-	
 		sessionFactory.close();
+		
 	}
+
+
+
+
 
 }

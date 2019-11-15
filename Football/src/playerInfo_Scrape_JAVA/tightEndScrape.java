@@ -1,4 +1,4 @@
-package scrape;
+package playerInfo_Scrape_JAVA;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -8,10 +8,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-public class wideReceiverScrape {
-	public wideReceiverScrape()
+public class tightEndScrape {
+	public tightEndScrape()
 	{
-	final String url = "http://www.nfl.com/stats/categorystats?archive=false&conference=null&statisticPositionCategory=WIDE_RECEIVER&season=2019&seasonType=REG&experience=&tabSeq=1&qualified=true&Submit=Go";
+	final String url = "http://www.nfl.com/stats/categorystats?archive=false&conference=null&statisticPositionCategory=TIGHT_END&season=2019&seasonType=REG&experience=&tabSeq=1&qualified=true&Submit=Go";
 
 	try {
 		final Document doc = Jsoup.connect(url).get();
@@ -39,7 +39,7 @@ public class wideReceiverScrape {
 						playerTd,player20Plus, player40Plus,  player1st, player1stPerc,    playerFum);
 				
 				System.out.println(
-						playerRank + "\t" + playerName + "\t \t" + playerTeam + "\t" + playerPos + "\t" + playerRec);
+						playerRank + " " + playerName + " " + playerTeam + " " + playerPos + " " + playerRec);
 			}
 		}
 	} catch (Exception ex) {
@@ -50,7 +50,7 @@ public class wideReceiverScrape {
 	public static void send(String ra, String na, String te, String pos, String rec, String yds, String avg,
 			String ydsG, String td, String lng, String first, String firstPer,  String twen, String forty, String fum)
 	{
-		wideReceiver wide1 = new wideReceiver(ra, na, te, pos, rec, yds, avg, ydsG, td, lng, first, firstPer, twen, forty, fum);
+		tightEnd tight1 = new tightEnd(ra, na, te, pos, rec, yds, avg, ydsG, td, lng, first, firstPer, twen, forty, fum);
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.getCurrentSession();
 		
@@ -58,11 +58,11 @@ public class wideReceiverScrape {
 		Transaction tx=null;
 		try {
 			tx = session.beginTransaction();
-		
+			
 			//Update Sport java object
 			
 			//Save java object Sport to database
-			session.save(wide1);
+			session.save(tight1);
 			session.flush();
 			tx.commit();
 		}catch(Exception se) {

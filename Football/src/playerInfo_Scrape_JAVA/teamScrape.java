@@ -1,4 +1,4 @@
-package scrape;
+package playerInfo_Scrape_JAVA;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
