@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mpping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- Hibernate mapping file, it maps a Java class Sport(ID,Sport) to database table sports(id,sports) -->
+
+<hibernate-mapping>
+	<class name="playerInfo_Scrape_JAVA.runningBack" table="runningBack">  <!-- Java class Sport to table sport --> 
+		<id name="id" type="int">
+			<generator class="increment" /> <!-- ID is automatically generated -->
+		</id>
+		<property name="Rank" column="ranked" type="string" />
+		<property name="Name" column="name" type="string" />
+		<property name="Team" column="team" type="string" />
+		<property name="Pos" column="pos" type="string" />
+		<property name="Att" column="att" type="string" />		
+		<property name="AttG" column="attG" type="string" />
+		<property name="Yds" column="yards" type="string" />
+		<property name="Avg" column="avg" type="string" />
+		<property name="YdsG" column="ydsG" type="string" />
+		<property name="Td" column="td" type="string" />		
+		<property name="First" column="first" type="string" />
+		<property name="FirstPerc" column="firstPercent" type="string" />
+		<property name="Lng" column="lng" type="string" />
+		<property name="TwentyPlus" column="twentyPlus" type="string" />
+		<property name="FortyPlus" column="fortyPlus" type="string" />
+		<property name="Fum" column="fum" type="string" />
+		
+
+		
+		
+	</class>
+</hibernate-mapping>
