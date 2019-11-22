@@ -1,0 +1,118 @@
+@charset "ISO-8859-1";
+/*	Colors
+	Light Blue = #4286c7;
+*/
+/* The navigation menu */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The subnavigation menu */
+.subnav {
+	border-radius: 10px;
+  float: left;
+  overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 12px;
+  background-color: #333; 
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #4286c7;
+  border-radius: 10px;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #4286c7;
+  width: 100%;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.footer {
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #4286c7;
+   color: white;
+   text-align: center;
+}
+
+.footer-text {
+   font-size: 12px;
+   padding: 8px;
+}
+
+footer-links{
+	margin: 12px;
+	
+}
+
+.footer-links a{
+	
+	
+	color: white;
+	font-size: 14px;
+	padding-bottom: 8px;
+	
+}
+
+.mainFBIMAGE {
+	max-width:100%;
+	height:auto.;
+	width:auto\9;
+	
+}
+
+.login-div {
+	 position: float-right;
+}
+
+.topnav-right {
+	 float: right;
+}

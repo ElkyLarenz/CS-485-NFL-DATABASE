@@ -1,0 +1,49 @@
+@charset "ISO-8859-1";
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #4286c7;
+   color: white;
+   text-align: center;
+}
+body {
+	
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+.background{
+	border-radius: 10px;
+	 height: 100vh;
+	background-image: url(../../WEBSITE_GENERAL_TEMPLATES/PHOTOS/NFL-logo.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.background img{
+	height: 100%;
+	width: 100%;
+	
+}
+
+input[type=text] {
+
+  border: 2px solid red;
+  border-radius: 4px;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
+label {
+	color: white;
+}
+form{
+	margin-left: 10px;
+	padding-top: 10px;
+}
+.note-div{
+	width: 20%;
+}

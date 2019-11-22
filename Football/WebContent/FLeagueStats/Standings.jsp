@@ -8,8 +8,8 @@
 
 <meta name="viewport"	
 		content="width=device-width, initial-scale=1.0">
-	<link href="WEB_DESIGN/CSS/general.css" type="text/css" rel="stylesheet">
-	<link href="WEB_DESIGN/CSS/login.css" type="text/css" rel="stylesheet">
+	<link href="../WEB_DESIGN/CSS/general.css" type="text/css" rel="stylesheet">
+	<link href="../WEB_DESIGN/CSS/login.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Fantasy Football</title>
 
@@ -17,24 +17,14 @@
 </head>
 
 
-<body background="WEBSITE_GENERAL_TEMPLATES/PHOTOS/NFL-logo.jpg">
+<body>
 
-<jsp:include page ="WEBSITE_GENERAL_TEMPLATES/header.html" />
+<jsp:include page ="../WEBSITE_GENERAL_TEMPLATES/header.html" />
 
 <%@ page import="java.io.*" %> 
 <%@ page import="userInteractions_JAVA.*" %>
 
-<form  action="logout.jsp" method="get">
-<label for="logout">You are successfully Logged Out</label> <br/><br/>
-
-
-</form>
-
-<jsp:include page ="WEBSITE_GENERAL_TEMPLATES/footer.html" />
-<%
-
-
-%>
+<jsp:include page ="../WEBSITE_GENERAL_TEMPLATES/footer.html" />
 
 </body>
 </html>

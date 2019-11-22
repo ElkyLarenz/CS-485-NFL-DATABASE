@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mpping DTD//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
+<!-- THIS MIGHT NEED TO CHANGED OR DELETED  -->
 <!-- Hibernate mapping file, it maps a Java class creditCard(ID,cradN) to database table  -->
 
 <hibernate-mapping>
-<!-- IF THIS DOESN'T WORK CHANGE THE CLASS PATH -->
-	<class name="../userInteractions_JAVA.userLoginInfo" table="userlogins">  <!-- Java class userLogins to table userLogins --> 
+	<class name=".homePage" table="userlogins">  <!-- Java class userLogins to table userLogins --> 
 		<id name="ID" type="int">
 			<generator class="increment" /> <!-- ID is automatically generated -->
 		</id>

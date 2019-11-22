@@ -12,7 +12,7 @@
   
   <servlet>
   	<servlet-name>getForm</servlet-name>
-  	<servlet-class>Lab6.getForm</servlet-class>
+  	<servlet-class>userInteractions_JAVA.getForm</servlet-class>
   </servlet>
   
   <servlet-mapping>
