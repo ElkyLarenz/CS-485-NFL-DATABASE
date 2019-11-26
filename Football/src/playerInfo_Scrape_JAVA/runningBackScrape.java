@@ -8,6 +8,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import beans.runningBack;
+
 public class runningBackScrape {
 	public runningBackScrape(){
 		final String url = "http://www.nfl.com/stats/categorystats?archive=false&conference=null&statisticPositionCategory=RUNNING_BACK&season=2019&seasonType=REG&experience=&tabSeq=1&qualified=true&Submit=Go";

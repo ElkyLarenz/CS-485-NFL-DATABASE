@@ -1,4 +1,4 @@
-package playerInfo_Scrape_JAVA;
+package beans;
 
 public class wideReceiver {
 	private int Id;

@@ -1,7 +1,6 @@
-package playerInfo_Scrape_JAVA;
+package beans;
 
-public class defensiveBack {
-
+public class linebacker {
 	private String Rank;
 	private String Name;
 	private String Team;
@@ -21,7 +20,7 @@ public class defensiveBack {
 	private String Td;
 	private int Id;
 	
-	public defensiveBack(String ra, String na, String te, String pos1, String comb1, String tot, String ast, String sck, String sfty,
+	public linebacker(String ra, String na, String te, String pos1, String comb1, String tot, String ast, String sck, String sfty,
 			String pdef, String inter, String tds, String yds, String lng, String ff, String rec, String td)
 	{
 		Rank = ra;
@@ -153,8 +152,6 @@ public class defensiveBack {
 	}
 
 	
-
-
 
 
 

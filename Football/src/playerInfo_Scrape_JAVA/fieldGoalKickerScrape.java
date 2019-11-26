@@ -8,6 +8,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import beans.fieldGoalKicker;
+
 public class fieldGoalKickerScrape {
 
 	public fieldGoalKickerScrape() {

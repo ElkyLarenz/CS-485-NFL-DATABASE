@@ -4,7 +4,7 @@
 <!-- Hibernate mapping file, it maps a Java class Sport(ID,Sport) to database table sports(id,sports) -->
 
 <hibernate-mapping>
-	<class name="playerInfo_Scrape_JAVA.wideReceiver" table="wideReceiver">  <!-- Java class Sport to table sport --> 
+	<class name="beans.wideReceiver" table="wideReceiver">  <!-- Java class Sport to table sport --> 
 		<id name="id" type="int">
 			<generator class="increment" /> <!-- ID is automatically generated -->
 		</id>

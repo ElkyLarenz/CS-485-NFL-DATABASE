@@ -1,4 +1,4 @@
-package playerInfo_Scrape_JAVA;
+package beans;
 
 public class team {
 	private int id;

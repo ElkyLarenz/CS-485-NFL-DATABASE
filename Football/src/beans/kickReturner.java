@@ -1,4 +1,4 @@
-package playerInfo_Scrape_JAVA;
+package beans;
 
 public class kickReturner {
 	private String Rank;
