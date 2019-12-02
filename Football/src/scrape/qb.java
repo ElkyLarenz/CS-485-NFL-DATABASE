@@ -50,6 +50,9 @@ public class qb {
 		rate = rate2;
 		
 	}
+	public qb() {
+		// TODO Auto-generated constructor stub
+	}
 	public int getid() {
 		return id;
 	}
