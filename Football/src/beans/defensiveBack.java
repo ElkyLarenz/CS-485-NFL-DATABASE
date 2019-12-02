@@ -43,6 +43,10 @@ public class defensiveBack {
 		Td = td;
 	}
 	
+	public defensiveBack() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getRank() {
 		return Rank;
 	}

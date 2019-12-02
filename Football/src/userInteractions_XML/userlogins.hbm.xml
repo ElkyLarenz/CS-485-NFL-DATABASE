@@ -5,7 +5,7 @@
 
 <hibernate-mapping>
 <!-- IF THIS DOESN'T WORK CHANGE THE CLASS PATH -->
-	<class name="../userInteractions_JAVA.userLoginInfo" table="userlogins">  <!-- Java class userLogins to table userLogins --> 
+	<class name="userInteractions_JAVA.userLoginInfo" table="userlogins">  <!-- Java class userLogins to table userLogins --> 
 		<id name="ID" type="int">
 			<generator class="increment" /> <!-- ID is automatically generated -->
 		</id>

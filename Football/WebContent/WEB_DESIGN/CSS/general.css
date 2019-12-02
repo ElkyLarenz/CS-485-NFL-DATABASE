@@ -116,3 +116,16 @@ footer-links{
 .topnav-right {
 	 float: right;
 }
+
+.player-type {
+	color: #4286c7;
+	padding-top: 20px;
+}
+.team-list {
+	color: #4286c7;
+	padding-top: 20px;
+}
+
+tr{
+	padding-botton: 10px;
+}

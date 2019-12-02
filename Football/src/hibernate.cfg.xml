@@ -18,7 +18,7 @@
 	<property name="dialect"> org.hibernate.dialect.SQLServerDialect</property>
 	<property name="current_session_context_class">thread</property>
 
-    
+    <!-- Football xml connections -->
 	<mapping resource = "playerInfo_Scrape_XML/team.hbm.xml"/>
 	<mapping resource = "playerInfo_Scrape_XML/qb.hbm.xml"/>
 	<mapping resource = "playerInfo_Scrape_XML/runningBack.hbm.xml"/>
@@ -28,6 +28,10 @@
 	<mapping resource = "playerInfo_Scrape_XML/linebacker.hbm.xml"/>
 	<mapping resource = "playerInfo_Scrape_XML/defensiveBack.hbm.xml"/>
 	<mapping resource = "playerInfo_Scrape_XML/fieldGoalKicker.hbm.xml"/>
+	
+	 <!-- user interactions xml connections -->
+	 <mapping resource = "userInteractions_XML/userlogins.hbm.xml"/>
+	
 
 </session-factory>
 </hibernate-configuration>
