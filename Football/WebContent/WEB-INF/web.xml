@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>fantasy football</display-name>
+  <welcome-file-list>
+   
+    <welcome-file>HomePage.jsp</welcome-file>
+   <!--   <welcome-file>index.jsp</welcome-file>
+    <welcome-file>registration.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>Players.jsp</welcome-file>
+    <welcome-file>Standings.jsp</welcome-file>
+    <welcome-file>Teams.jsp</welcome-file>
+    <welcome-file>ElitePlayers.jsp</welcome-file>
+    <welcome-file>FPAvg.jsp</welcome-file>
+    <welcome-file>projections.jsp</welcome-file> -->
+  </welcome-file-list>
+  
+  <!-- home page -->
+  <!--<servlet>
+  	<servlet-name>home</servlet-name>
+  	<jsp-file>/HomePage.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>football</servlet-name>
+  	<url-pattern>/football/*</url-pattern>
+  </servlet-mapping>
+  -->
+  <servlet>
+        <display-name>HomePage</display-name>
+        <servlet-name>HomePage</servlet-name>
+        <servlet-class>webPages_JAVA.HomePage</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>HomePage</servlet-name>
+        <url-pattern>/HomePage</url-pattern>
+    </servlet-mapping>
+  <!-- <servlet>
+        <display-name>Success</display-name>
+        <servlet-name>Success</servlet-name>
+        <servlet-class>lab5.Success</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Success</servlet-name>
+        <url-pattern>/Success</url-pattern>
+    </servlet-mapping> -->
+ 
+</web-app>
