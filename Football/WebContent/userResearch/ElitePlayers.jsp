@@ -40,13 +40,13 @@
         Statement st4 = con.createStatement();
         Statement st5 = con.createStatement();
         Statement st6 = con.createStatement();
-        ResultSet rs = st.executeQuery("select * from defensiveback where ranked ='1'; ");
-        ResultSet rs1 = st1.executeQuery("select * from defensivelineman where ranked ='1'; ");
-        ResultSet rs2 = st2.executeQuery("select * from linebacker where ranked ='1'; ");
-        ResultSet rs3 = st3.executeQuery("select * from qb where ranked ='1'; ");
-        ResultSet rs4 = st4.executeQuery("select * from runningback where ranked ='1'; ");
-        ResultSet rs5 = st5.executeQuery("select * from tightend where ranked ='1'; ");
-        ResultSet rs6 = st6.executeQuery("select * from widereceiver where ranked ='1'; ");
+        ResultSet rs = st.executeQuery("select * from defensiveback where id <= 5; "); //1 - 5
+        ResultSet rs1 = st1.executeQuery("select * from defensivelineman where id  <= 5; ");
+        ResultSet rs2 = st2.executeQuery("select * from linebacker where id <= 5; ");
+        ResultSet rs3 = st3.executeQuery("select * from qb where id <= 5; ");
+        ResultSet rs4 = st4.executeQuery("select * from runningback where id <= 5; ");
+        ResultSet rs5 = st5.executeQuery("select * from tightend where id <= 5; ");
+        ResultSet rs6 = st6.executeQuery("select * from widereceiver where id <= 5; ");
     %>
     <table>
 		<tr>
